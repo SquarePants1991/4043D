@@ -25,11 +25,13 @@ public class GUIController : MonoBehaviour {
 	}
 
 	public void OnStartButtonClick() {
+		Debug.Log ("OnStartButtonClick");
 		gameFlowController.GameStart ();
 		gameStartPanel.enabled = false;
 	}
 
 	public void OnRestartButtonClick() {
+		Debug.Log ("OnRestartButtonClick");
 		gameOverPanel.enabled = false;
 		gameFlowController.Reset ();
 		gameFlowController.GameStart ();

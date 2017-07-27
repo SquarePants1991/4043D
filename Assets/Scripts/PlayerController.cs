@@ -47,9 +47,9 @@ public class PlayerController : MonoBehaviour {
 	// Player Behaviors
 	void Jump() {
 		if (isOnGround) {
-			transform.GetComponent<Rigidbody> ().AddForce (new Vector3(0, 400, 0));
+//			transform.GetComponent<Rigidbody> ().AddForce (new Vector3(0, 400, 0));
 			isOnGround = false;
-			//transform.GetComponent<Rigidbody> ().velocity = new Vector3 (0, 6, 0);
+			transform.GetComponent<Rigidbody> ().velocity = new Vector3 (0, 6, 0);
 		}
 	}
 

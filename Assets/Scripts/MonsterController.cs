@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MonsterController : MonoBehaviour {
-	
+
 	public GameObject[] monsterTemplates;
 	private const int MonsterPoolSize = 30;
 	private ArrayList activeMonsterInstances;
@@ -12,7 +12,7 @@ public class MonsterController : MonoBehaviour {
 	void Start () {
 		CreateMonsterPool ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		CollectInactiveMonster ();
@@ -26,8 +26,10 @@ public class MonsterController : MonoBehaviour {
 		genPositions[1] = Random.Range (0, -width / 2);
 		for (int i = 0; i < genPositions.Length; ++i) {
 			GameObject monster = GetMonsterFromPool ();
-			Vector3 oldPos = monster.transform.position;
-			monster.transform.position = new Vector3(ground.transform.position.x + genPositions[i], oldPos.y ,ground.transform.position.z);
+			if (monster != null) {
+				Vector3 oldPos = monster.transform.position;
+				monster.transform.position = new Vector3(ground.transform.position.x + genPositions[i], oldPos.y ,ground.transform.position.z);
+			}
 		}
 	}
 
@@ -39,13 +41,17 @@ public class MonsterController : MonoBehaviour {
 			monster.SetActive (false);
 			inactiveMonsterInstances.Add (monster);
 		}
+		monsterTemplates [0].SetActive (false);
 	}
 
 	void CollectInactiveMonster() {
 		for (int i = 0; i < activeMonsterInstances.Count; ++i) {
 			GameObject monster = activeMonsterInstances [i] as GameObject;
-			if (monster.GetComponent<Renderer> ().isVisible == false) {
+			Renderer monsterRenderer = monster.GetComponent<Renderer> ();
+			if (Camera.main.WorldToScreenPoint(monsterRenderer.bounds.center + monsterRenderer.bounds.size / 2).x < 0.0) {
+				Debug.LogError ("Monster Out");
 				inactiveMonsterInstances.Add (monster);
+				monster.SetActive (false);
 				activeMonsterInstances.RemoveAt (i);
 				i--;
 			}
@@ -53,9 +59,23 @@ public class MonsterController : MonoBehaviour {
 	}
 
 	GameObject GetMonsterFromPool() {
-		GameObject monster = inactiveMonsterInstances [0] as GameObject;
-		inactiveMonsterInstances.RemoveAt (0);
-		monster.SetActive (true);
-		return monster;
+		if (inactiveMonsterInstances.Count > 0) {
+			GameObject monster = inactiveMonsterInstances [0] as GameObject;
+			inactiveMonsterInstances.RemoveAt (0);
+			activeMonsterInstances.Add (monster);
+			monster.SetActive (true);
+			return monster;
+		}
+		return null;
+	}
+
+	public void Reset() {
+		for (int i = 0; i < activeMonsterInstances.Count; ++i) {
+			GameObject monster = activeMonsterInstances [i] as GameObject;
+			monster.SetActive (false);
+		}
+		inactiveMonsterInstances.AddRange (activeMonsterInstances);
+		activeMonsterInstances.RemoveRange (0, activeMonsterInstances.Count);
+
 	}
 }

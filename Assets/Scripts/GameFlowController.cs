@@ -42,5 +42,6 @@ public class GameFlowController : MonoBehaviour {
 	public void Reset() {
 		playerController.Reset ();
 		groundController.Reset ();
+		monsterController.Reset ();
 	}
 }
