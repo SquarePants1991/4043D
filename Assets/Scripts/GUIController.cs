@@ -7,6 +7,8 @@ public class GUIController : MonoBehaviour {
 	public GameFlowController gameFlowController;
 	public Canvas gameStartPanel;
 	public Canvas gameOverPanel;
+	public Text scoreLabel;
+	public Text highestScoreLabel;
 	// Use this for initialization
 	void Start () {
 		gameStartPanel.enabled = true;
@@ -15,7 +17,8 @@ public class GUIController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		scoreLabel.text = gameFlowController.playerController.score.ToString ();
+		highestScoreLabel.text = gameFlowController.playerController.highestScore.ToString ();
 	}
 
 	public void GameOver() {
