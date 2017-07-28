@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
+	public GameObject followGameObject;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,6 +13,5 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 }

@@ -263,7 +263,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 30
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -305,6 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5283ea90695a44ec9bae949761469d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followGameObject: {fileID: 1425979387}
 --- !u!1 &274407811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,7 +1418,7 @@ Transform:
   m_GameObject: {fileID: 1953109723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 1, z: 2}
+  m_LocalScale: {x: 20, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
