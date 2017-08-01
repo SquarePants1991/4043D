@@ -33,10 +33,11 @@ public class PlayerController : MonoBehaviour {
 
 	void SyncCamera() {
 		Vector3 oldPosition = Camera.main.transform.position;
-		oldPosition.x = transform.position.x;
+		oldPosition.x = transform.position.x + 6.0f;
 		oldPosition.y = transform.position.y * 0.5f + 0.5f;
 		Camera.main.transform.position = oldPosition;
 		Vector3 playerPos = transform.position;
+		playerPos.x = oldPosition.x;
 		playerPos.y *= 0.9f;
 		Camera.main.transform.LookAt (playerPos);
 	}

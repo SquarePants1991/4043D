@@ -21,9 +21,12 @@ public class MonsterController : MonoBehaviour {
 	void NewGroundDidCreate(GameObject ground) {
 		Renderer groundRenderer = ground.GetComponent<Renderer> ();
 		float width = groundRenderer.bounds.size.x;
-		float[] genPositions = new float[2];
-		genPositions[0] = Random.Range (0, width / 2);
-		genPositions[1] = Random.Range (0, -width / 2);
+		int count = Random.Range (1, 4);
+		float[] genPositions = new float[count];
+		float value = Random.Range ( width / 3, width * 2 / 3);
+		for (int i = 0; i < count; ++i) {
+			genPositions [i] = value + i * 1.2f;
+		}
 		for (int i = 0; i < genPositions.Length; ++i) {
 			GameObject monster = GetMonsterFromPool ();
 			if (monster != null) {
@@ -49,7 +52,7 @@ public class MonsterController : MonoBehaviour {
 			GameObject monster = activeMonsterInstances [i] as GameObject;
 			Renderer monsterRenderer = monster.GetComponent<Renderer> ();
 			if (Camera.main.WorldToScreenPoint(monsterRenderer.bounds.center + monsterRenderer.bounds.size / 2).x < 0.0) {
-				Debug.LogError ("Monster Out");
+				Debug.Log ("Monster Out");
 				inactiveMonsterInstances.Add (monster);
 				monster.SetActive (false);
 				activeMonsterInstances.RemoveAt (i);
