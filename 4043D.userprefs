@@ -1,14 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MonsterController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FlyDragon.cs">
     <Files>
-      <File FileName="Assets\Scripts\GUIController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GroundController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CameraController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Materials\Base.shader" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="36" Column="43" />
-      <File FileName="Assets\Scripts\MonsterController.cs" Line="24" Column="35" />
-      <File FileName="Assets\Scripts\GameFlowController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CameraController.cs" Line="15" Column="18" />
+      <File FileName="Assets/Scripts/GUIController.cs" Line="29" Column="2" />
+      <File FileName="Assets/Scripts/GroundController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Materials/Base.shader" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MonsterController.cs" Line="75" Column="29" />
+      <File FileName="Assets/Scripts/GameFlowController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/FlyDragon.cs" Line="24" Column="1" />
+      <File FileName="Assets/Scripts/EmptyInterface.cs" Line="3" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

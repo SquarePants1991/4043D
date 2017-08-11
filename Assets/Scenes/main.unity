@@ -366,6 +366,8 @@ MonoBehaviour:
   monsterTemplates:
   - {fileID: 1344962583}
   - {fileID: 482525161}
+  levels: 0000000001000000
+  hardLevel: 0
 --- !u!114 &274407815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,6 +967,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 199.58556, y: 296.78784, z: 93.82713}
   m_Center: {x: 5.730583, y: 148.39215, z: -9.955593}
+--- !u!114 &1344962588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344962583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63025aaaad1f54257a37c6c07ac95313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1425979387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1091,10 @@ MonoBehaviour:
   isDead: 0
   score: 0
   highestScore: 0
+  speed: 10
+  hardLevel: 0
   scoreF: 0
+  originSpeed: 0
 --- !u!1 &1470376474
 GameObject:
   m_ObjectHideFlags: 0

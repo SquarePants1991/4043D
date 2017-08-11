@@ -7,8 +7,11 @@ public class PlayerController : MonoBehaviour {
 	public bool isDead;
 	public int score;
 	public int highestScore;
+	public float speed;
+	public int hardLevel;
 
 	public float scoreF;
+	public float originSpeed;
 	private bool isOnGround;
 	private Vector3 originPosition;
 	// Use this for initialization
@@ -16,12 +19,18 @@ public class PlayerController : MonoBehaviour {
 		isDead = false;
 		originPosition = transform.position;
 		highestScore = PlayerPrefs.GetInt ("HighestScore");
+		originSpeed = speed;
+		Debug.Log ("Player Start");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (isDead == false) {
-			transform.Translate (Time.deltaTime * 10, 0, 0);
+			speed = originSpeed + hardLevel * 2;
+			if (speed > 20) {
+				speed = 20;
+			}
+			transform.Translate (Time.deltaTime * speed, 0, 0);
 			scoreF += Time.deltaTime * 10;   
 			score = (int)scoreF;
 			highestScore = highestScore <= score ? score : highestScore;
@@ -70,6 +79,8 @@ public class PlayerController : MonoBehaviour {
 
 	// Reset to origin state
 	public void Reset() {
+		hardLevel = 0;
+		speed = originSpeed;
 		scoreF = 0;
 		score = 0;
 		highestScore = PlayerPrefs.GetInt ("HighestScore");

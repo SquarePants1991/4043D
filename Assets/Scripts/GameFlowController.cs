@@ -7,18 +7,27 @@ public class GameFlowController : MonoBehaviour {
 	public MonsterController monsterController;
 	public GroundController groundController;
 
+	private int hardLevel;
+
 	private bool gameRunning;
 	// Use this for initialization
 	void Start () {
 		gameRunning = false;
 		playerController.enabled = false;
 		groundController.enabled = false;
+		hardLevel = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (playerController.isDead) {
-			GameFinish ();
+		if (gameRunning) {
+			Debug.Log ("Game Running");
+			if (playerController.isDead) {
+				GameFinish ();
+			}
+			hardLevel = (int)(playerController.score / 100);
+			monsterController.hardLevel = hardLevel;
+			playerController.hardLevel = hardLevel;
 		}
 	}
 
@@ -40,6 +49,7 @@ public class GameFlowController : MonoBehaviour {
 	}
 
 	public void Reset() {
+		hardLevel = 0;
 		playerController.Reset ();
 		groundController.Reset ();
 		monsterController.Reset ();

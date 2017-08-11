@@ -5,11 +5,16 @@ using UnityEngine;
 public class MonsterController : MonoBehaviour {
 
 	public GameObject[] monsterTemplates;
+	public int[] levels;
+	public int hardLevel = 0;
 	private const int MonsterPoolSize = 30;
 	private ArrayList[] activeMonsterInstances;
 	private ArrayList[] inactiveMonsterInstances;
 	// Use this for initialization
 	void Start () {
+		if (monsterTemplates.Length != levels.Length) {
+			Debug.LogError ("Monster Templates's lenght must equal to Levels's length");
+		}
 		activeMonsterInstances = new ArrayList[monsterTemplates.Length];
 		inactiveMonsterInstances = new ArrayList[monsterTemplates.Length];
 		CreateMonsterPool ();
@@ -23,7 +28,7 @@ public class MonsterController : MonoBehaviour {
 	void NewGroundDidCreate(GameObject ground) {
 		Renderer groundRenderer = ground.GetComponent<Renderer> ();
 		float width = groundRenderer.bounds.size.x;
-		int monsterIndex = Random.Range (0, monsterTemplates.Length);
+		int monsterIndex = Random.Range (0, GetMonsterIndexMaxDueToCurrentLevel() + 1);
 		float[] genPositions = new float[1];
 		float value = Random.Range ( width / 3, width * 2 / 3);
 		for (int i = 0; i < 1; ++i) {
@@ -36,6 +41,16 @@ public class MonsterController : MonoBehaviour {
 				monster.transform.position = new Vector3(ground.transform.position.x + genPositions[i], oldPos.y ,ground.transform.position.z);
 			}
 		}
+	}
+
+	int GetMonsterIndexMaxDueToCurrentLevel() {
+		int maxIndex = monsterTemplates.Length;
+		foreach(int monsterLevel in levels) {
+			if (monsterLevel <= this.hardLevel) {
+				maxIndex = monsterLevel;
+			}
+		}
+		return maxIndex;
 	}
 
 	void CreateMonsterPool() {
@@ -88,6 +103,6 @@ public class MonsterController : MonoBehaviour {
 			inactiveMonsterInstances[monsterIndex].AddRange (activeMonsterInstances[monsterIndex]);
 			activeMonsterInstances[monsterIndex].RemoveRange (0, activeMonsterInstances[monsterIndex].Count);
 		}
-
+		hardLevel = 0;
 	}
 }
