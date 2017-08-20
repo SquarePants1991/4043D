@@ -1,0 +1,295 @@
+fileFormatVersion: 2
+guid: cfdd36782e726884d839be4d7568a991
+timeCreated: 1503231914
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: "BD_L_\u5927\u817F"
+    100002: "BD_L_\u5C0F\u817F"
+    100004: "BD_L_\u811A"
+    100006: "BD_R_\u5927\u817F"
+    100008: "BD_R_\u5C0F\u817F"
+    100010: "BD_R_\u811A"
+    100012: "BD_\u5C3E\u5DF401"
+    100014: "BD_\u5C3E\u5DF402"
+    100016: "BD_\u5C3E\u5DF403"
+    100018: "BD_\u5C3E\u5DF404"
+    100020: "BD_\u624B\u81C2"
+    100022: "BD_\u809A\u5B50"
+    100024: "BD_\u8111\u888B"
+    100026: "BD_\u8116\u5B50"
+    100028: Box002
+    100030: //RootNode
+    400000: "BD_L_\u5927\u817F"
+    400002: "BD_L_\u5C0F\u817F"
+    400004: "BD_L_\u811A"
+    400006: "BD_R_\u5927\u817F"
+    400008: "BD_R_\u5C0F\u817F"
+    400010: "BD_R_\u811A"
+    400012: "BD_\u5C3E\u5DF401"
+    400014: "BD_\u5C3E\u5DF402"
+    400016: "BD_\u5C3E\u5DF403"
+    400018: "BD_\u5C3E\u5DF404"
+    400020: "BD_\u624B\u81C2"
+    400022: "BD_\u809A\u5B50"
+    400024: "BD_\u8111\u888B"
+    400026: "BD_\u8116\u5B50"
+    400028: Box002
+    400030: //RootNode
+    4300000: Box002
+    7400000: Running
+    7400002: Jump
+    7400004: Die
+    9500000: //RootNode
+    13700000: Box002
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Running
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: "BD_\u809A\u5B50"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_L_\u5927\u817F"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_L_\u5927\u817F/BD_L_\u5C0F\u817F"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_L_\u5927\u817F/BD_L_\u5C0F\u817F/BD_L_\u811A"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_R_\u5927\u817F"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_R_\u5927\u817F/BD_R_\u5C0F\u817F"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_R_\u5927\u817F/BD_R_\u5C0F\u817F/BD_R_\u811A"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u5C3E\u5DF401"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u5C3E\u5DF401/BD_\u5C3E\u5DF402"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u5C3E\u5DF401/BD_\u5C3E\u5DF402/BD_\u5C3E\u5DF403"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u5C3E\u5DF401/BD_\u5C3E\u5DF402/BD_\u5C3E\u5DF403/BD_\u5C3E\u5DF404"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u624B\u81C2"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u624B\u81C2/BD_\u8116\u5B50"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u624B\u81C2/BD_\u8116\u5B50/BD_\u8111\u888B"
+        weight: 1
+      - path: Box002
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jump
+      takeName: Take 001
+      firstFrame: 20
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: "BD_\u809A\u5B50"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_L_\u5927\u817F"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_L_\u5927\u817F/BD_L_\u5C0F\u817F"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_L_\u5927\u817F/BD_L_\u5C0F\u817F/BD_L_\u811A"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_R_\u5927\u817F"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_R_\u5927\u817F/BD_R_\u5C0F\u817F"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_R_\u5927\u817F/BD_R_\u5C0F\u817F/BD_R_\u811A"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u5C3E\u5DF401"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u5C3E\u5DF401/BD_\u5C3E\u5DF402"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u5C3E\u5DF401/BD_\u5C3E\u5DF402/BD_\u5C3E\u5DF403"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u5C3E\u5DF401/BD_\u5C3E\u5DF402/BD_\u5C3E\u5DF403/BD_\u5C3E\u5DF404"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u624B\u81C2"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u624B\u81C2/BD_\u8116\u5B50"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u624B\u81C2/BD_\u8116\u5B50/BD_\u8111\u888B"
+        weight: 1
+      - path: Box002
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Die
+      takeName: Take 001
+      firstFrame: 25
+      lastFrame: 28
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: "BD_\u809A\u5B50"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_L_\u5927\u817F"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_L_\u5927\u817F/BD_L_\u5C0F\u817F"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_L_\u5927\u817F/BD_L_\u5C0F\u817F/BD_L_\u811A"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_R_\u5927\u817F"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_R_\u5927\u817F/BD_R_\u5C0F\u817F"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_R_\u5927\u817F/BD_R_\u5C0F\u817F/BD_R_\u811A"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u5C3E\u5DF401"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u5C3E\u5DF401/BD_\u5C3E\u5DF402"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u5C3E\u5DF401/BD_\u5C3E\u5DF402/BD_\u5C3E\u5DF403"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u5C3E\u5DF401/BD_\u5C3E\u5DF402/BD_\u5C3E\u5DF403/BD_\u5C3E\u5DF404"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u624B\u81C2"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u624B\u81C2/BD_\u8116\u5B50"
+        weight: 1
+      - path: "BD_\u809A\u5B50/BD_\u624B\u81C2/BD_\u8116\u5B50/BD_\u8111\u888B"
+        weight: 1
+      - path: Box002
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

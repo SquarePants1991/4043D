@@ -14,13 +14,14 @@ public class PlayerController : MonoBehaviour {
 	public float originSpeed;
 	private bool isOnGround;
 	private Vector3 originPosition;
+	private Animator animator;
 	// Use this for initialization
 	void Start () {
 		isDead = false;
 		originPosition = transform.position;
 		highestScore = PlayerPrefs.GetInt ("HighestScore");
 		originSpeed = speed;
-		Debug.Log ("Player Start");
+		animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -61,9 +62,11 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (collision.gameObject.tag == "Ground") {
 			isOnGround = true;
+			animator.SetBool ("onGround", isOnGround);
 		} else if (collision.gameObject.tag == "Monster") {
 			PlayerPrefs.SetInt ("HighestScore", highestScore);
 			isDead = true;
+			animator.SetBool ("die", isDead);
 		}
 	}
 
@@ -72,6 +75,7 @@ public class PlayerController : MonoBehaviour {
 		if (isOnGround) {
 //			transform.GetComponent<Rigidbody> ().AddForce (new Vector3(0, 400, 0));
 			isOnGround = false;
+			animator.SetBool ("onGround", isOnGround);
 			transform.GetComponent<Rigidbody> ().velocity = new Vector3 (0, 12, 0);
 		}
 	}
@@ -85,6 +89,7 @@ public class PlayerController : MonoBehaviour {
 		score = 0;
 		highestScore = PlayerPrefs.GetInt ("HighestScore");
 		isDead = false;
+		animator.SetBool ("die", isDead);
 		transform.position = originPosition;
 		SyncCamera ();
 	}
